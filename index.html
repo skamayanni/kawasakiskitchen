@@ -111,7 +111,7 @@
 
       <div class="hero-background">
         <video autoplay="" muted="" loop="" playsinline="">
-          <source src="assets/img/restaurant/video-4.mp4" type="video/mp4">
+          <source id="hero-image" alt="Hero Image" src="assets/img/restaurant/video-4.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
       </div>
@@ -121,12 +121,11 @@
           <div class="col-lg-8">
             <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
               <span class="tagline">Experience Culinary Excellence @</span>
-              <h1 class="hero-title">OJE'S KITCHEN</h1>
-              <p class="hero-description">We fuse the bold, vibrant flavors of Nigeria with
-                the delicate, refined tastes of Japan.</p>
+              <h1 id="hero-title" class="hero-title">loading...</h1>
+              <p id="hero-subtitle" class="hero-description">loading...</p>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                <a href="#" class="btn btn-primary open-chat">Order Now</a>
+                <a href="#" id="hero-cta" class="btn btn-primary open-chat">Order Now</a>
                 <a href="#menu" class="btn btn-outline">View Menu</a>
               </div>
 
@@ -227,11 +226,13 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-aos="fade-up">
             <div class="about-content">
-              <h2>Experience Our Unique Approach</h2>
-              <p class="fst-italic">Chef Oje Kitchen is your go-to kitchen for delicious, home cooked meals that
+              <h2 id="about-title">Experience Our Unique Approach</h2>
+              <p id="about-text" class="fst-italic">Chef Oje Kitchen is your go-to kitchen for delicious, home
+                cooked meals that
                 satisfy every craving. We specialize in tasty, well-prepared dishes made with love and the freshest
                 ingredients.</p>
-              <p>Whether you're ordering in or dining out, we bring rich flavors and culinary passion straight to your
+              <p id="about-description">Whether you're ordering in or dining out, we bring rich flavors and culinary
+                passion straight to your
                 plate. Taste the difference today!</p>
 
               <div class="row mt-4">
@@ -274,7 +275,8 @@
                     <span class="number">10</span>
                     <span class="text">Years of Dedication</span>
                   </div>
-                  <img src="assets/img/restaurant/showcase-6.webp" class="img-fluid rounded" alt="Restaurant Image">
+                  <img id="about-image" src="assets/img/restaurant/showcase-6.webp" class="img-fluid rounded"
+                    alt="About Image">
                 </div>
               </div>
             </div>
@@ -295,203 +297,193 @@
         <p>Our menu celebrates rich flavors, fresh ingredients, and culinary creativity. From signature classics to
           modern favorites, every dish at Oje’s Kitchen is prepared to delight your taste buds and leave you coming back
           for more.</p>
-      </div><!-- End Section Title -->
+      </div>
+      <!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="menu-filters isotope-filters mb-5" data-aos="fade-up" data-aos-delay="200">
-            <ul>
-              <li data-filter="*" class="filter-active">All Dishes</li>
-              <li data-filter=".filter-starters">Appetizers</li>
-              <li data-filter=".filter-main">Entrees</li>
-              <li data-filter=".filter-dessert">Sweet Treats</li>
-              <li data-filter=".filter-drinks">Beverages</li>
-            </ul>
+
+        <div id="menu-filters">
+          <button onclick="filterMenu('all')">All</button>
+          <button onclick="filterMenu('breakfast')">Breakfast</button>
+          <button onclick="filterMenu('meals')">Meals</button>
+          <button onclick="filterMenu('drinks')">Drinks</button>
+        </div>
+
+        <div id="menu-items" class="menu-grid isotope-container row gy-5" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
+                </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="menu-grid isotope-container row gy-5" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-vegetarian">V</span>
-                  </div>
-                  <div class="price-overlay">$12.50</div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Prosciutto-Wrapped Asparagus</h4>
-                  <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot active"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/starter-3.webp" alt="Appetizer" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-seafood">SF</span>
-                  </div>
-                  <div class="price-overlay">$14.95</div>
+          </div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Seared Scallops with Cauliflower</h4>
-                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot active"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-main">
-              <div class="menu-card featured">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/main-2.webp" alt="Main Course" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-chef">Chef's Choice</span>
-                  </div>
-                  <div class="price-overlay">$28.00</div>
+          </div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Herb-Crusted Rack of Lamb</h4>
-                  <p>Mauris auctor nulla et felis tempor, eu consectetur ante vulputate non.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot active"></span>
-                    <span class="spice-dot active"></span>
-                    <span class="spice-dot"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-main">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/main-6.webp" alt="Main Course" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-vegetarian">V</span>
-                    <span class="badge-gluten-free">GF</span>
-                  </div>
-                  <div class="price-overlay">$22.75</div>
+          </div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Quinoa Stuffed Bell Peppers</h4>
-                  <p>Donec vel nunc non erat vehicula cursus. Integer pharetra mauris vel lorem.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot active"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-dessert">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/dessert-4.webp" alt="Dessert" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-signature">Signature</span>
-                  </div>
-                  <div class="price-overlay">$11.25</div>
+          </div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Salted Caramel Cheesecake</h4>
-                  <p>Cras fermentum odio eu feugiat luctus. Aliquam erat volutpat sed bibendum.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-dessert">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/dessert-9.webp" alt="Dessert" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-vegan">VG</span>
-                  </div>
-                  <div class="price-overlay">$9.50</div>
+          </div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Dark Chocolate Avocado Mousse</h4>
-                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-drinks">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/drink-2.webp" alt="Beverage" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-alcoholic">21+</span>
-                  </div>
-                  <div class="price-overlay">$15.00</div>
+          </div>
+          <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+            <div class="menu-card">
+              <div class="menu-card-image">
+                <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                <div class="dietary-badges">
+                  <span class="badge-vegetarian">V</span>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Elderflower Gin Fizz</h4>
-                  <p>Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet non.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                  </div>
+                <div class="price-overlay">$12.50</div>
+              </div>
+              <div class="menu-card-content">
+                <h4>Prosciutto-Wrapped Asparagus</h4>
+                <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                <div class="spice-level">
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot active"></span>
                 </div>
               </div>
             </div>
-
-            <div class="col-xl-4 col-lg-6 isotope-item filter-drinks">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/restaurant/drink-6.webp" alt="Beverage" class="img-fluid">
-                  <div class="dietary-badges">
-                    <span class="badge-fresh">Fresh</span>
-                  </div>
-                  <div class="price-overlay">$8.75</div>
-                </div>
-                <div class="menu-card-content">
-                  <h4>Tropical Green Smoothie</h4>
-                  <p>Ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris.</p>
-                  <div class="spice-level">
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                    <span class="spice-dot"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
 
         </div>
+        <BR></BR>
 
         <div class="menu-actions" data-aos="fade-up" data-aos-delay="400">
           <div class="row align-items-center">
             <div class="col-md-8">
               <div class="seasonal-notice">
                 <i class="bi bi-info-circle"></i>
-                <span>Our seasonal menu changes quarterly. Some items may vary based on ingredient availability.</span>
+                <span>Our seasonal menu changes quarterly. Some items may vary based on ingredient
+                  availability.</span>
               </div>
             </div>
             <div class="col-md-4 text-md-end">
@@ -503,73 +495,67 @@
           </div>
         </div>
 
-        <div class="chef-recommendations" data-aos="fade-up" data-aos-delay="500">
-          <div class="section-header">
-            <h3><i class="bi bi-star-fill"></i> Today's Chef Recommendations</h3>
-            <p>Carefully curated dishes featuring the finest seasonal ingredients</p>
-          </div>
 
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="recommendation-card">
-                <div class="recommendation-image">
-                  <img src="assets/img/restaurant/main-9.webp" alt="Chef Recommendation" class="img-fluid">
-                  <div class="chef-badge">
-                    <i class="bi bi-award"></i>
-                    <span>Chef's Pick</span>
-                  </div>
-                </div>
-                <div class="recommendation-content">
-                  <div class="recommendation-header">
-                    <h4>Pan-Seared Duck Breast</h4>
-                    <div class="recommendation-price">$34.50</div>
-                  </div>
-                  <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.
-                  </p>
-                  <div class="recommendation-details">
-                    <div class="serving-info">
-                      <i class="bi bi-clock"></i>
-                      <span>25 min preparation</span>
-                    </div>
-                    <div class="dietary-info">
-                      <span class="mini-badge gluten-free">GF</span>
-                      <span class="mini-badge dairy-free">DF</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
 
-            <div class="col-lg-6">
-              <div class="recommendation-card">
-                <div class="recommendation-image">
-                  <img src="assets/img/restaurant/main-8.webp" alt="Chef Recommendation" class="img-fluid">
-                  <div class="chef-badge">
-                    <i class="bi bi-award"></i>
-                    <span>Chef's Pick</span>
-                  </div>
-                </div>
-                <div class="recommendation-content">
-                  <div class="recommendation-header">
-                    <h4>Lobster Thermidor Risotto</h4>
-                    <div class="recommendation-price">$39.95</div>
-                  </div>
-                  <p>Fusce dapibus tellus ac cursus commodo tortor mauris condimentum nibh ut fermentum massa.</p>
-                  <div class="recommendation-details">
-                    <div class="serving-info">
-                      <i class="bi bi-clock"></i>
-                      <span>30 min preparation</span>
-                    </div>
-                    <div class="dietary-info">
-                      <span class="mini-badge seafood">SF</span>
-                      <span class="mini-badge premium">Premium</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
+      <div class="chef-recommendations" data-aos="fade-up" data-aos-delay="500">
+        <div class="section-header">
+          <h3><i class="bi bi-star-fill"></i> Today's Chef Recommendations</h3>
+          <p>Carefully curated dishes featuring the finest seasonal ingredients</p>
         </div>
+
+        <!-- Chefs Section -->
+        <section id="chefs" class="chefs section">
+
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="featured-chef row align-items-center g-4" data-aos="fade-up" data-aos-delay="150">
+              <div id="featured-dishes" class="col-lg-5">
+                <figure class="chef-photo m-0">
+                  <img src="assets/img/Ojeskitchenlogo1.png" alt="Executive chef portrait" class="img-fluid">
+                  <div class="badge-overlay">
+                    <span class="pill"><i class="bi bi-patch-check-fill me-2"></i> Verified Brand</span>
+                  </div>
+                </figure>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="chef-content">
+                  <div class="topline d-inline-flex align-items-center mb-2">
+                    <i class="bi bi-star-fill me-1"></i>
+                    <span>Featured Chef</span>
+                  </div>
+                  <h3 class="name">Avery Montrose</h3>
+                  <p class="role mb-3">Executive Chef</p>
+                  <p class="bio mb-4">At Oje’s Kitchen, our chefs are storytellers at heart. Drawing from the bold,
+                    soulful flavors of Nigerian cuisine and the precision, balance, and elegance of Japanese cooking,
+                    each
+                    plate is a carefully crafted expression of culture, technique, and passion.</p>
+
+                  <ul class="awards list-unstyled d-flex flex-wrap gap-2 mb-4">
+                    <li class="award-badge"><i class="bi bi-award me-1"></i> Gourmand Trophy 2022</li>
+                    <li class="award-badge"><i class="bi bi-bookmark-star me-1"></i> Le Cordon Bleu Honors</li>
+                    <li class="award-badge"><i class="bi bi-trophy me-1"></i> City Best Tasting Menu</li>
+                  </ul>
+
+                  <div class="signature">
+                    <img src="assets/img/Ojeskitchensignature.png" alt="Chef signature" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </section><!-- /Chefs Section -->
+
+      </div>
+
+
 
       </div>
 
@@ -761,51 +747,7 @@
 
     </section><!-- /Testimonials Section -->
 
-    <!-- Chefs Section -->
-    <section id="chefs" class="chefs section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="featured-chef row align-items-center g-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-5">
-            <figure class="chef-photo m-0">
-              <img src="assets/img/Ojeskitchenlogo1.png" alt="Executive chef portrait" class="img-fluid">
-              <div class="badge-overlay">
-                <span class="pill"><i class="bi bi-patch-check-fill me-2"></i> Verified Brand</span>
-              </div>
-            </figure>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="chef-content">
-              <div class="topline d-inline-flex align-items-center mb-2">
-                <i class="bi bi-star-fill me-1"></i>
-                <span>Featured Chef</span>
-              </div>
-              <h3 class="name">Avery Montrose</h3>
-              <p class="role mb-3">Executive Chef</p>
-              <p class="bio mb-4">At Oje’s Kitchen, our chefs are storytellers at heart. Drawing from the bold,
-                soulful flavors of Nigerian cuisine and the precision, balance, and elegance of Japanese cooking, each
-                plate is a carefully crafted expression of culture, technique, and passion.</p>
-
-              <ul class="awards list-unstyled d-flex flex-wrap gap-2 mb-4">
-                <li class="award-badge"><i class="bi bi-award me-1"></i> Gourmand Trophy 2022</li>
-                <li class="award-badge"><i class="bi bi-bookmark-star me-1"></i> Le Cordon Bleu Honors</li>
-                <li class="award-badge"><i class="bi bi-trophy me-1"></i> City Best Tasting Menu</li>
-              </ul>
-
-              <div class="signature">
-                <img src="assets/img/Ojeskitchensignature.png" alt="Chef signature" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-
-    </section><!-- /Chefs Section -->
 
     <!-- Book A Table Section -->
     <section id="book-a-table" class="book-a-table section light-background">
@@ -1066,129 +1008,7 @@
           </div>
         </div>
 
-        <!-- <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
-          <div class="row align-items-center">
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
-              <div class="awards-content">
-                <h3>Recognition &amp; Awards</h3>
-                <p>Oje's Kitchen is celebrated for quality, creativity, and an unforgettable dining experience that
-                  brings two rich cultures together on one plate.</p>
-              </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
-              <div class="awards-grid">
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-trophy-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Best Japanese-infused Nigerian Restaurant</h4>
-                    <span>City Dining Awards</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>5-Star Rating</h4>
-                    <span>Local Food Guide</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-gem"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Excellence Award</h4>
-                    <span>Culinary Institute</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-heart-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Customer Choice</h4>
-                    <span>Community Favorite</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
-        <!-- <div class="community-section" data-aos="fade-up" data-aos-delay="200">
-          <div class="row g-4">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
-              <div class="community-card">
-                <div class="community-header">
-                  <div class="community-icon">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <div>
-                    <h3>Community Involvement</h3>
-                    <p>Supporting local farmers and charities since 2015</p>
-                  </div>
-                </div>
-                <div class="community-stats">
-                  <div class="stat-row">
-                    <div class="stat-item">
-                      <span class="stat-number">$50K+</span>
-                      <span class="stat-label">Donated to Local Charities</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">25+</span>
-                      <span class="stat-label">Local Farm Partners</span>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <div class="stat-item">
-                      <span class="stat-number">100+</span>
-                      <span class="stat-label">Community Events Hosted</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">500+</span>
-                      <span class="stat-label">Volunteer Hours</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-              <div class="sustainability-card">
-                <div class="sustainability-header">
-                  <div class="sustainability-icon">
-                    <i class="bi bi-recycle"></i>
-                  </div>
-                  <div>
-                    <h3>Eco-Friendly Practices</h3>
-                    <p>Committed to sustainable dining and zero waste</p>
-                  </div>
-                </div>
-                <div class="sustainability-features">
-                  <div class="feature-item">
-                    <i class="bi bi-leaf-fill"></i>
-                    <span>100% Compostable Packaging</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-water"></i>
-                    <span>Water Conservation Program</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-lightning-fill"></i>
-                    <span>Renewable Energy Powered</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-truck"></i>
-                    <span>Local Sourcing Priority</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
       </div>
 
@@ -1421,6 +1241,215 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    const projectId = "gqjwiiye"
+    const dataset = "production"
+
+    // Function to build Sanity image URL
+    function sanityImageUrl(ref) {
+      if (!ref) return ""
+
+      const parts = ref.split("-")
+      const id = parts[1]
+      const size = parts[2]
+      const format = parts[3]
+
+      return `https://cdn.sanity.io/images/${projectId}/${dataset}/${id}-${size}.${format}`
+    }
+
+    // Fetch Homepage Data
+    async function loadHomepage() {
+      const query = encodeURIComponent(`*[_type=="homepage"][0]{heroTitle, heroSubtitle, heroImage, callToAction}`)
+      const url = `https://${projectId}.api.sanity.io/v2023-05-03/data/query/${dataset}?query=${query}`
+
+      const res = await fetch(url)
+      const data = await res.json()
+      const content = data.result
+
+      document.getElementById("hero-title").textContent = content.heroTitle
+      document.getElementById("hero-subtitle").textContent = content.heroSubtitle
+      document.getElementById("hero-image").src = sanityImageUrl(content.heroImage.asset._ref)
+      document.getElementById("hero-cta").textContent = content.callToAction
+    }
+
+    // Fetch About Section
+    async function loadAbout() {
+      const query = encodeURIComponent(`*[_type=="about"][0]{title, description, image}`)
+      const url = `https://${projectId}.api.sanity.io/v2023-05-03/data/query/${dataset}?query=${query}`
+
+      const res = await fetch(url)
+      const data = await res.json()
+      const content = data.result
+
+      document.getElementById("about-title").textContent = content.title
+      document.getElementById("about-description").textContent = content.description
+      document.getElementById("about-image").src = sanityImageUrl(content.image.asset._ref)
+    }
+
+    // Fetch Gallery
+    async function loadGallery() {
+      const query = encodeURIComponent(`*[_type=="gallery"][0]{images}`)
+      const url = `https://${projectId}.api.sanity.io/v2023-05-03/data/query/${dataset}?query=${query}`
+
+      const res = await fetch(url)
+      const data = await res.json()
+      const content = data.result
+
+      const galleryDiv = document.getElementById("gallery-images")
+      galleryDiv.innerHTML = ""
+      content.images.forEach(img => {
+        const imageEl = document.createElement("img")
+        imageEl.src = sanityImageUrl(img.asset._ref)
+        imageEl.alt = "Gallery Image"
+        galleryDiv.appendChild(imageEl)
+      })
+    }
+
+    // Fetch Menu Items
+    let allMenuItems = []
+
+    async function loadMenu() {
+
+      const query = encodeURIComponent(`*[_type=="menu"]{name, description, price, category, "imageRef": image.asset._ref}`)
+      const url = `https://${projectId}.api.sanity.io/v2023-05-03/data/query/${dataset}?query=${query}`
+
+      const res = await fetch(url)
+      const data = await res.json()
+      const content = data.result
+
+      allMenuItems = content
+      displayMenu(allMenuItems)
+
+    }
+
+    function displayMenu(items) {
+
+      const menuDiv = document.getElementById("menu-items")
+      menuDiv.innerHTML = ""
+
+      const categories = {}
+
+      // group items by category
+      items.forEach(item => {
+
+        if (!categories[item.category]) {
+          categories[item.category] = []
+        }
+
+        categories[item.category].push(item)
+
+      })
+
+
+      // create sections
+      Object.keys(categories).forEach(category => {
+
+        const section = document.createElement("div")
+        section.classList.add("menu-category")
+
+        const title = document.createElement("h2")
+        title.innerText = category.toUpperCase()
+
+        section.appendChild(title)
+
+        const grid = document.createElement("div")
+        grid.classList.add("menu-category-grid")
+
+        categories[category].forEach(item => {
+
+          const itemDiv = document.createElement("div")
+          itemDiv.classList.add("menu-card")
+
+          itemDiv.innerHTML = `
+        <img src="${sanityImageUrl(item.imageRef)}" alt="${item.name}" />
+
+        <div class="menu-card-content">
+          <h3>${item.name}</h3>
+          <p>${item.description}</p>
+          <p class="menu-price">$${item.price}</p>
+        </div>
+      `
+
+          grid.appendChild(itemDiv)
+
+        })
+
+        section.appendChild(grid)
+        menuDiv.appendChild(section)
+
+      })
+
+    }
+
+    function filterMenu(category) {
+
+      if (category === "all") {
+        displayMenu(allMenuItems)
+      }
+      else {
+
+        const filtered = allMenuItems.filter(
+          item => item.category === category
+        )
+
+        displayMenu(filtered)
+      }
+
+    }
+
+    async function loadFeatured() {
+
+      const query = encodeURIComponent(
+        `*[_type=="menu" && featured==true]{
+      name,
+      description,
+      price,
+      "imageRef": image.asset._ref
+    }`
+      )
+
+      const url = `https://${projectId}.api.sanity.io/v2023-05-03/data/query/${dataset}?query=${query}`
+
+      const res = await fetch(url)
+      const data = await res.json()
+      const items = data.result
+
+      const featuredDiv = document.getElementById("featured-dishes")
+
+      featuredDiv.innerHTML = ""
+
+      items.forEach(item => {
+
+        const dish = document.createElement("div")
+
+        dish.classList.add("menu-card")
+
+        dish.innerHTML = `
+      <img src="${sanityImageUrl(item.imageRef)}" alt="${item.name}" />
+
+      <div class="menu-card-content">
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+        <p class="menu-price">$${item.price}</p>
+      </div>
+    `
+
+        featuredDiv.appendChild(dish)
+
+      })
+
+    }
+
+
+    // Load everything
+    loadHomepage()
+    loadAbout()
+    loadGallery()
+    loadMenu()
+    loadFeatured()
+  </script>
 
 </body>
 
